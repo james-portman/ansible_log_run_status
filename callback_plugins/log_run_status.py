@@ -39,7 +39,11 @@ class CallbackModule(CallbackBase):
 
     def __init__(self):
         super(CallbackModule, self).__init__()
-        self.tasks_status = {}
+        self.tasks_status = {
+            "changed": 0,
+            "failed": 0,
+            "ok": 0
+        }
 
     def log(self, host, category, data):
         if category not in self.tasks_status:

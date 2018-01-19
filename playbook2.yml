@@ -1,7 +1,9 @@
 ---
+# this playbook will fail
 - hosts: localhost
   connection: local
   tasks:
     - debug:
         msg: "hello"
     - command: whoami
+    - fail:

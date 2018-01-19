@@ -1,0 +1,8 @@
+---
+# This playbook should work but fail idempotence
+- hosts: localhost
+  connection: local
+  tasks:
+    - debug:
+        msg: "hello"
+    - command: whoami
